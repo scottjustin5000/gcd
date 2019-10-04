@@ -4,7 +4,8 @@
   "description": "gcd function",
   "main": "index.js",
   "scripts": {
-    "test": "echo \"Error: no test specified\" && exit 1"
+    "pretest": "standard",
+    "test": "NODE_ENV=test node_modules/jest/bin/jest.js"
   },
   "repository": {
     "type": "git",
@@ -18,5 +19,22 @@
   "bugs": {
     "url": "https://github.com/scottjustin5000/gcd/issues"
   },
-  "homepage": "https://github.com/scottjustin5000/gcd#readme"
+  "homepage": "https://github.com/scottjustin5000/gcd#readme",
+  "devDependencies": {
+    "standard": "12.0.1",
+    "jest": "24.9.0"
+  },
+  "jest": {
+    "testPathIgnorePatterns": [
+      "/node_modules/"
+    ]
+  },
+  "standard": {
+    "globals": [
+      "jest",
+      "describe",
+      "it",
+      "expect"
+    ]
+  }
 }
